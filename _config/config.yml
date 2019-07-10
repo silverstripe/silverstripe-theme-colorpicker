@@ -1,0 +1,6 @@
+---
+Name: themecolorpickerconfig
+---
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - SilverStripe\ThemeColorpicker\Extensions\ColorpickerSiteConfigExtension
