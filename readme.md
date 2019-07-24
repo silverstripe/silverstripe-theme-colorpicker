@@ -12,7 +12,7 @@ This module provides a [Theme color picker](docs/en/01_Features/ThemeColors.md).
 To install this module, you can do so with Composer:
 
 ```
-composer require silverstripe/colorpicker
+composer require silverstripe/theme-colorpicker
 ```
 
 ## Usage
