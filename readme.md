@@ -1,9 +1,8 @@
 # Colorpicker Module
 
-[![Build Status](https://travis-ci.org/silverstripe/colorpicker.svg?branch=master)](https://travis-ci.org/silverstripe/colorpicker)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/silverstripe/colorpicker/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/silverstripe/colorpicker/?branch=master)
-[![codecov](https://codecov.io/gh/silverstripe/colorpicker/branch/master/graph/badge.svg)](https://codecov.io/gh/silverstripe/colorpicker)
-[![SilverStripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
+[![Build Status](https://travis-ci.org/silverstripe/silverstripe-colorpicker.svg?branch=master)](https://travis-ci.org/silverstripe/silverstripe-colorpicker)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/silverstripe/silverstripe-colorpicker/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/silverstripe/silverstripe-colorpicker/?branch=master)
+[![codecov](https://codecov.io/gh/silverstripe/silverstripe-colorpicker/branch/master/graph/badge.svg)](https://codecov.io/gh/silverstripe/silverstripe-colorpicker)
 
 This module provides a [Theme color picker](docs/en/01_Features/ThemeColors.md). It allows CMS users to adjust the colors of different areas of their site without requiring developer intervention.
 
