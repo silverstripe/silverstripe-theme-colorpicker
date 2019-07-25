@@ -7,7 +7,6 @@ use SilverStripe\Colorpicker\Forms\FontPickerField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
 
-
 /**
  * Class ColorpickerSiteConfigExtension
  * @package SilverStripe\Colorpicker\Extensions
