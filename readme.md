@@ -65,6 +65,25 @@ $custom-theme-colors: (
 For more information on using customisable theme colors in the Wātea theme, please refer to the CWP
 Developer documentation: [Using the Wātea theme](https://github.com/silverstripe/cwp/blob/master/docs/en/01_Working_with_projects/14_Using_the_Watea_theme.md).
 
+## Using in your own theme
+
+First, ensure that there is a HTML `class` present in your template which indicates the theme variation to the CSS.
+Below is the default implementation which you'll also find in the Bambusa and Watea theme.
+
+```html
+<body class="$ClassName
+        <% if $SiteConfig.HeaderBackground %>theme-header-{$SiteConfig.HeaderBackground}<% end_if %>
+        <% if $SiteConfig.NavigationBarBackground %>theme-nav-{$SiteConfig.NavigationBarBackground}<% end_if %>
+        <% if $SiteConfig.CarouselBackground %>theme-carousel-{$SiteConfig.CarouselBackground}<% end_if %>
+        <% if $SiteConfig.FooterBackground %>theme-footer-{$SiteConfig.FooterBackground}<% end_if %>
+        <% if $SiteConfig.AccentColor %>theme-accent-{$SiteConfig.AccentColor}<% end_if %>
+        <% if $SiteConfig.TextLinkColor %>theme-link-{$SiteConfig.TextLinkColor}<% end_if %>
+        <% if $SiteConfig.BannerBlockBackground %>theme-banner-block-{$SiteConfig.BannerBlockBackground}<% end_if %>">
+```
+
+You can now either manually generated the colour variations in your CSS (class name suffixes),
+or you can trawl through the `src/scss` folder in either the Bambusa or Watea theme to find out how to use `@mixin` in SCSS to achieve that automatically.
+
 ## Versioning
 
 This library follows [Semver](http://semver.org). According to Semver, you will be able to upgrade to any minor or patch version of this library without any breaking changes to the public API. Semver also requires that we clearly define the public API for this library.
