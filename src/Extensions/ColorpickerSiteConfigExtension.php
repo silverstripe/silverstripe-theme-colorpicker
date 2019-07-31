@@ -21,6 +21,7 @@ class ColorpickerSiteConfigExtension extends DataExtension
         'CarouselBackground' => 'Varchar(50)',
         'FooterBackground' => 'Varchar(50)',
         'AccentColor' => 'Varchar(50)',
+        'BannerBlockBackground' => 'Varchar(50)',
         'TextLinkColor' => 'Varchar(50)',
     );
 
@@ -145,85 +146,103 @@ class ColorpickerSiteConfigExtension extends DataExtension
         $fields->addFieldsToTab(
             'Root.ThemeOptions',
             [
-                 ColorPickerField::create(
-                     'HeaderBackground',
-                     _t(
-                         __CLASS__ . '.HeaderBackground',
-                         'Header background'
-                     ),
-                     $this->getThemeOptionsExcluding([
-                         'default-accent',
-                     ])
-                 ),
-                 ColorPickerField::create(
-                     'NavigationBarBackground',
-                     _t(
-                         __CLASS__ . '.NavigationBarBackground',
-                         'Navigation bar background'
-                     ),
-                     $this->getThemeOptionsExcluding([
-                         'default-accent',
-                     ])
-                 ),
-                 ColorPickerField::create(
-                     'CarouselBackground',
-                     _t(
-                         __CLASS__ . '.CarouselBackground',
-                         'Carousel background'
-                     ),
-                     $this->getThemeOptionsExcluding([
-                         'default-accent',
-                     ])
-                 )->setDescription(
-                     _t(
-                         __CLASS__ . '.CarouselBackgroundDescription',
-                         'The background color of the carousel when there is no image set.'
-                     )
-                 ),
-                 ColorPickerField::create(
-                     'FooterBackground',
-                     _t(
-                         __CLASS__ . '.FooterBackground',
-                         'Footer background'
-                     ),
-                     $this->getThemeOptionsExcluding([
-                         'light-grey',
-                         'white',
-                         'default-accent',
-                     ])
-                 ),
-                 ColorPickerField::create(
-                     'AccentColor',
-                     _t(
-                         __CLASS__ . '.AccentColor',
-                         'Accent color'
-                     ),
-                     $this->getThemeOptionsExcluding([
-                         'light-grey',
-                         'white',
-                         'default-background',
-                     ])
-                 )->setDescription(
-                     _t(
-                         __CLASS__ . '.AccentColorDescription',
-                         'Affects color of buttons, current navigation items, etc. '.
-                         'Please ensure sufficient contrast with background colors.'
-                     )
-                 ),
-                 ColorPickerField::create(
-                     'TextLinkColor',
-                     _t(
-                         __CLASS__ . '.TextLinkColor',
-                         'Text link color'
-                     ),
-                     $this->getThemeOptionsExcluding([
-                         'black',
-                         'light-grey',
-                         'dark-grey',
-                         'white',
-                         'default-background',
-                     ])
-                 ),
+                ColorPickerField::create(
+                    'HeaderBackground',
+                    _t(
+                        __CLASS__ . '.HeaderBackground',
+                        'Header background'
+                    ),
+                    $this->getThemeOptionsExcluding([
+                        'default-accent',
+                    ])
+                ),
+                ColorPickerField::create(
+                    'NavigationBarBackground',
+                    _t(
+                        __CLASS__ . '.NavigationBarBackground',
+                        'Navigation bar background'
+                    ),
+                    $this->getThemeOptionsExcluding([
+                        'default-accent',
+                    ])
+                ),
+                ColorPickerField::create(
+                    'CarouselBackground',
+                    _t(
+                        __CLASS__ . '.CarouselBackground',
+                        'Carousel background'
+                    ),
+                    $this->getThemeOptionsExcluding([
+                        'default-accent',
+                    ])
+                )->setDescription(
+                    _t(
+                        __CLASS__ . '.CarouselBackgroundDescription',
+                        'The background color of the carousel when there is no image set.'
+                    )
+                ),
+                ColorPickerField::create(
+                    'FooterBackground',
+                    _t(
+                        __CLASS__ . '.FooterBackground',
+                        'Footer background'
+                    ),
+                    $this->getThemeOptionsExcluding([
+                        'light-grey',
+                        'white',
+                        'default-accent',
+                    ])
+                ),
+                ColorPickerField::create(
+                    'AccentColor',
+                    _t(
+                        __CLASS__ . '.AccentColor',
+                        'Accent color'
+                    ),
+                    $this->getThemeOptionsExcluding([
+                        'light-grey',
+                        'white',
+                        'default-background',
+                    ])
+                )->setDescription(
+                    _t(
+                        __CLASS__ . '.AccentColorDescription',
+                        'Affects color of buttons, current navigation items, etc. '.
+                        'Please ensure sufficient contrast with background colors.'
+                    )
+                ),
+                ColorPickerField::create(
+                    'BannerBlockBackground',
+                    _t(
+                        __CLASS__ . '.BannerBlockBackground',
+                        'Banner block background'
+                    ),
+                    $this->getOwner()->getThemeOptionsExcluding([
+                        'light-grey',
+                        'white',
+                        'default-background',
+                        'default-accent'
+                    ])
+                )->setDescription(
+                    _t(
+                        __CLASS__ . '.BannerBlockBackgroundDescription',
+                        'Background color of banner blocks.'
+                    )
+                ),
+                ColorPickerField::create(
+                    'TextLinkColor',
+                    _t(
+                        __CLASS__ . '.TextLinkColor',
+                        'Text link color'
+                    ),
+                    $this->getThemeOptionsExcluding([
+                        'black',
+                        'light-grey',
+                        'dark-grey',
+                        'white',
+                        'default-background',
+                    ])
+                ),
             ]
         );
 
@@ -270,6 +289,7 @@ class ColorpickerSiteConfigExtension extends DataExtension
                 'FooterBackground' => 'default-background',
                 'AccentColor' => 'default-accent',
                 'TextLinkColor' => 'default-accent',
+                'BannerBlockBackground' => 'dark-orange'
             ]);
         }
     }
